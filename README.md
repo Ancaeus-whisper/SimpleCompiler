@@ -31,7 +31,7 @@ npm index.js
 因为目前该编译器使用堆栈的形式对源语言进行语法分析，所以下面这种形式的Common-Lisp语句将无法分析：
 
 ```Lisp
-((Function a b)(Function c d))
+(Function (Function a b)(Function c d))
 ```
 
 在编译器分析完第一个函数后，会将下一个读取到的函数直接压在上面（于是生成的语法树就错误地变成了嵌套形式）
